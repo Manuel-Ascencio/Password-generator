@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c31a5;
+  color: #f5f5f5;
+}
+
+h1 {
+  font-weight: 800;
+  font-style: oblique;
+  font-size: 2.5rem;
+}
+
+.container {
+  max-width: 800px;
+}
+
+form {
+  margin: 30px 0;
+}
+
+.row {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form label {
+  line-height: 40px;
+  width: 50%;
+  font-size: 1.2rem;
+  font-family: "Prompt", sans-serif;
+  letter-spacing: 1px;
+}
+
+button {
+  border: none;
+  background-color: #101f78;
+  color: #f5f5f5;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.false {
+  background-color: #cc3747;
+}
+
+button:hover {
+  background-color: #0b1554;
+}
+
+.character-number {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.character-number button {
+  width: 30%;
+}
+
+.character-number button:nth-child(1) {
+  border-radius: 5px 0 0 5px;
+}
+
+.character-number button:nth-child(3) {
+  border-radius: 0 5px 5px 0;
+}
+
+.character-number input {
+  width: 40%;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: default;
+}
+
+.row button {
+  width: 30%;
+}
+
+.btn-generate {
+  line-height: 40px;
+  font-size: 1.1rem;
+}
+
+.btn-generate i {
+  margin-left: 10px;
+}
+
+.generate input {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: "Prompt", sans-serif;
+}
+
+.generate input::selection {
+  background-color: #f5f5f5;
+}
+
+#copy-alert {
+  justify-content: flex-end;
+  width: 70%;
+  margin: auto;
+}
+
+#copy-alert i {
+  margin-right: 10px;
+}
+
+#copy-alert p {
+  color: rgba(255, 255, 255, 0);
+  font-size: 0.8rem;
+}
+
+#copy-alert.active p {
+  color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    height: auto;
+  }
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 50px;
+  }
+  form label {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+  .row {
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  /* .character-number button {
+    width: 25%;
+  } */
+  .character-number input {
+    width: 80%;
+  }
+  .character-number {
+    width: 90%;
+  }
+  .row button {
+    width: 90%;
+    line-height: 50px;
+  }
+  .generate button {
+    margin-top: 20px;
+  }
+  .generate input {
+    margin-top: 40px;
+    line-height: 50px;
+    width: 90%;
+  }
+}
